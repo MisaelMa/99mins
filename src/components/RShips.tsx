@@ -1,16 +1,9 @@
 import React from 'react';
-import {Theme, createStyles, makeStyles} from '@material-ui/core/styles';
-import ImageList from '@material-ui/core/ImageList';
+import {createStyles, createTheme, makeStyles, Theme} from '@material-ui/core/styles';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
-import itemData from './itemdata';
 import {Ships} from "@/common/types/app/Launche";
-import {Grid} from "@material-ui/core";
-import {createTheme} from '@material-ui/core/styles'
-import {MuiThemeProvider, Slider} from "@material-ui/core";
+import {Grid, MuiThemeProvider} from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -30,23 +23,6 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-/**
- * The example data is structured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const itemData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 export default function RShips(props: { ship: Ships[] }) {
   const {ship = []} = props
   const classes = useStyles();
@@ -64,17 +40,6 @@ export default function RShips(props: { ship: Ships[] }) {
   })
   return (
     <div className={classes.root}>
-      {/*<ImageList rowHeight={190} className={classes.imageList}>*/}
-      {/*  {ship.map((item,i) => (*/}
-      {/*    <ImageListItem key={i} >*/}
-      {/*      <img src={item.image} alt={item.name}/>*/}
-      {/*      <ImageListItemBar*/}
-      {/*        title={item.name}*/}
-      {/*        subtitle={<span> {item.home_port}</span>}*/}
-      {/*      />*/}
-      {/*    </ImageListItem>*/}
-      {/*  ))}*/}
-      {/*</ImageList>*/}
       <MuiThemeProvider theme={theme}>
         <Grid style={{height: 290, overflow: "auto"}} container spacing={1}>
           {ship.map((item, i) => (

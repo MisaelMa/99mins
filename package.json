@@ -5,7 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "test": "jest"
   },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
@@ -51,11 +52,17 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.1.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/jest": "^26.0.24",
     "@types/node": "^15.14.1",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "@types/websocket": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.30.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -66,6 +73,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^27.0.6",
     "prettier-eslint": "^12.0.0",
     "typescript": "4.3.2",
     "url-loader": "^4.1.1"

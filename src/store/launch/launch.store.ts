@@ -1,8 +1,6 @@
 import {AnyAction} from 'redux';
-import {Session} from '../../common/types/app/types';
 import * as actionTypes from './launch.types';
 import {HYDRATE} from 'next-redux-wrapper';
-import {User} from "@/common/types";
 import {LauncheType} from "@/common/types/app/Launche";
 
 const data: LauncheType = {
@@ -37,15 +35,6 @@ export const reducer = (
       return {
         state,
         ...action.payload
-      };
-    case actionTypes.LOGOUT:
-      return {
-        ...state,
-        token: null,
-        auth: {
-          id: 0,
-          name: ``,
-        },
       };
     default:
       return state;

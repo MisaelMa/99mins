@@ -1,7 +1,5 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import {Button, Grid, Paper} from "@material-ui/core";
-import Launche from "@/components/Launche";
+import {Button, Grid} from "@material-ui/core";
 import RShips from "@/components/RShips";
 import {useLaunch} from "@/common/hooks/useLaunch";
 import ReactPlayer from "react-player";
