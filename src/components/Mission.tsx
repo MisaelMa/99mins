@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Grid} from "@material-ui/core";
-import RShips from "@/components/RShips";
-import {useLaunch} from "@/common/hooks/useLaunch";
+import RShips from "../components/RShips";
+import {useLaunch} from "../common/hooks/useLaunch";
 import ReactPlayer from "react-player";
 
 export default function Mission(props: any) {

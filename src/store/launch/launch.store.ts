@@ -1,7 +1,7 @@
 import {AnyAction} from 'redux';
 import * as actionTypes from './launch.types';
 import {HYDRATE} from 'next-redux-wrapper';
-import {LauncheType} from "@/common/types/app/Launche";
+import {LauncheType} from "../../common/types/app/Launche";
 
 const data: LauncheType = {
   id:0,

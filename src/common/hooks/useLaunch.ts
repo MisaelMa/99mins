@@ -1,7 +1,7 @@
 import {useSelector, useDispatch} from "react-redux";
-import {RootState} from "@/store";
-import {LauncheType} from "@/common/types/app/Launche";
-import {SETlAUNCH} from "@/store/launch/launch.types";
+import {RootState} from "../../store";
+import {LauncheType} from "../types/app/Launche";
+import {SETlAUNCH} from "../../store/launch/launch.types";
 
 export function useLaunch() {
   const dispatch = useDispatch()

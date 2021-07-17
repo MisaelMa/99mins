@@ -3,7 +3,7 @@ import {Context, createWrapper} from 'next-redux-wrapper';
 import {reducer} from './launch/launch.store';
 
 
-const rootStore = combineReducers({
+export const rootStore = combineReducers({
   launch: reducer,
 });
 
@@ -11,7 +11,7 @@ const rootStore = combineReducers({
 export let initialState = {};
 
 // @ts-ignore
-const makeStore = ({ctx}: Context) => {
+export const makeStore = ({ctx}: Context) => {
   let store = createStore(rootStore, initialState);
   // @ts-ignore
   if (ctx) {

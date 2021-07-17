@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "test": "jest"
+    "test": "npx jest --runInBand --detectOpenHandles --colors --verbose --reporters=default"
   },
   "dependencies": {
     "@apollo/react-hooks": "^4.0.0",
@@ -52,6 +52,10 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@apollo/react-testing": "^4.0.0",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/dom": "^8.1.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -75,6 +79,8 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^27.0.6",
     "prettier-eslint": "^12.0.0",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.1.0",
     "typescript": "4.3.2",
     "url-loader": "^4.1.1"
   },

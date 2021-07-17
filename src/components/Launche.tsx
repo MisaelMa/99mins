@@ -6,7 +6,7 @@ import {mdiRocketLaunch} from '@mdi/js'
 import {Grid} from "@material-ui/core";
 import Icon from "@mdi/react";
 import moment from "moment"
-import {useLaunch} from "@/common/hooks/useLaunch";
+import {useLaunch} from "../common/hooks/useLaunch";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

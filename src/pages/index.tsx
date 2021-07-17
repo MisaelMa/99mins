@@ -5,10 +5,10 @@ import {createStyles, makeStyles, Theme} from "@material-ui/core/styles";
 import {deepOrange} from "@material-ui/core/colors";
 import {useRouter} from "next/router";
 import {DocumentNode, gql, useQuery} from '@apollo/react-hooks';
-import Launche from "@/components/Launche";
-import {LauncheType} from "@/common/types/app/Launche";
-import Mission from "@/components/Mission";
-import {useLaunch} from "@/common/hooks/useLaunch";
+import Launche from "../components/Launche";
+import {LauncheType} from "../common/types/app/Launche";
+import Mission from "../components/Mission";
+import {useLaunch} from "../common/hooks/useLaunch";
 
 function GET_ALL_REPORT(): DocumentNode {
   return gql`query amir {
@@ -77,10 +77,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
 
 const Index: NextPage = () => {
   const classes = useStyles();
-  const {push} = useRouter()
-  useEffect(() => {
-    // getData()
-  }, [])
+
   const queryGetAllReport = GET_ALL_REPORT();
 
   const {data, loading} = useQuery<{ launchesPast: LauncheType[] }>(queryGetAllReport, {

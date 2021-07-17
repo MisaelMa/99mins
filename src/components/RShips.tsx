@@ -2,7 +2,7 @@ import React from 'react';
 import {createStyles, createTheme, makeStyles, Theme} from '@material-ui/core/styles';
 import ImageListItem from '@material-ui/core/ImageListItem';
 import ImageListItemBar from '@material-ui/core/ImageListItemBar';
-import {Ships} from "@/common/types/app/Launche";
+import {Ships} from "../common/types/app/Launche";
 import {Grid, MuiThemeProvider} from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) =>
