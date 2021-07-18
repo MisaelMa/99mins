@@ -3,11 +3,26 @@ import { render as rtlRender } from '@testing-library/react'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 // Import your own reducer
-import {reducer} from '../store/launch/launch.store';
-
+import {reducer} from '../../src/store/launch/launch.store';
+import {LauncheType} from "../../src/common/types/app/Launche";
+const data: LauncheType = {
+  id:0,
+  "mission_name": "mission test",
+  "launch_date_local": "",
+  "launch_site": {
+    "site_name_long": ""
+  },
+  "links": {
+    "article_link": null,
+    "video_link": "",
+    "mission_patch": ""
+  },
+  "ships": [],
+  "details": "test"
+}
 function render(ui: any, {
     preloadedState,
-    store = configureStore({ reducer: { launch: reducer }, preloadedState }),
+    store = configureStore({ reducer: { launch: reducer }, preloadedState: {launch: data} }),
     ...renderOptions
   }: any = {}
 ) {

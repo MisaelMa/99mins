@@ -9,9 +9,6 @@ const config: Config.InitialOptions = {
   },
   verbose: true,
   "testEnvironment": "jsdom",
-  'roots': [
-    '<rootDir>/src'
-  ],
   moduleDirectories: ['node_modules', 'src'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   "transform": {

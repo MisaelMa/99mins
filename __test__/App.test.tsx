@@ -1,13 +1,12 @@
 import {screen} from "@testing-library/react";
 import React from "react";
-import App from "../pages/index";
+import App from "../src/pages";
 import {MockedProvider} from '@apollo/react-testing';
 import {ApolloLink} from "@apollo/client/link/core";
-import {Provider} from 'react-redux'
-import {render} from "./test-utils";
+import {render} from "./store/RStore";
 
 describe("App", () => {
-  it("renders without crashing", () => {
+  it("render all app", () => {
     const timeStartLink = new ApolloLink((operation, forward) => {
       operation.setContext({
         start: new Date(),
@@ -19,6 +18,6 @@ describe("App", () => {
           <App/>
         </MockedProvider>
     );
-    expect(screen.getByRole("heading", {name: "Welcome to Next.js!"})).toBeInTheDocument();
+    expect(screen.getByRole("heading", {name: "Last Launches"})).toBeInTheDocument();
   });
 });

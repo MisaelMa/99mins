@@ -7,37 +7,15 @@ import {Grid} from "@material-ui/core";
 import Icon from "@mdi/react";
 import moment from "moment"
 import {useLaunch} from "../common/hooks/useLaunch";
+import {LauncheType} from "@/common/types/app/Launche";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-      marginBottom: 5
-    },
-    details: {
-      display: 'flex',
-      flexDirection: 'column',
-    },
-    content: {
-      flex: '1 0 auto',
-    },
-    cover: {
-      width: 151,
-    },
-    controls: {
-      display: 'flex',
-      alignItems: 'center',
-      paddingLeft: theme.spacing(1),
-      paddingBottom: theme.spacing(1),
-    },
-    playIcon: {
-      height: 38,
-      width: 38,
-    },
-  }),
-);
 
-export default function Launche(props: any) {
+interface PropsLaunch {
+  launch: LauncheType,
+  onClick: (d: LauncheType) => void
+}
+
+export default function Launche(props: PropsLaunch) {
   const {
     launch = {
       id: 0,
@@ -47,11 +25,9 @@ export default function Launche(props: any) {
       },
       details: "",
       launch_date_local: "",
-    },
+    } as LauncheType,
     onClick
   } = props
-  const classes = useStyles();
-  const theme = useTheme();
   const {launch: mission} = useLaunch()
   return (
     <Card
@@ -59,14 +35,14 @@ export default function Launche(props: any) {
       style={{
         borderRadius: 8,
         marginBottom: 10,
-        backgroundColor: mission.id === launch.id ? 'rgb(63, 81, 181)': 'white',
-        color:  mission.id === launch.id ? 'white': "black",
+        backgroundColor: mission.id === launch.id ? 'rgb(63, 81, 181)' : 'white',
+        color: mission.id === launch.id ? 'white' : "black",
         height: 105,
         marginTop: 3
       }} onClick={() => {
       onClick(launch)
     }}>
-      <Grid container style={{marginTop:10, marginLeft:5}}>
+      <Grid container style={{marginTop: 10, marginLeft: 5}}>
         <Grid item sm={2} md={2} xl={2} lg={2}>
           <Icon size={2} style={{marginTop: 10}} path={mdiRocketLaunch}/>
         </Grid>

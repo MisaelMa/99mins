@@ -4,7 +4,7 @@ import RShips from "../components/RShips";
 import {useLaunch} from "../common/hooks/useLaunch";
 import ReactPlayer from "react-player";
 
-export default function Mission(props: any) {
+export default function Mission() {
   const {launch} = useLaunch()
   return (
     <Grid container spacing={0}
