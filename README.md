@@ -19,4 +19,14 @@ npm run build
 ```
 
 
-Qu
+### Questions
+
+## Why React?
+```
+It is very easy to use and I like it
+```
+
+## What would I do differently if I was allocated more time?
+```
+add more type in data model
+```
