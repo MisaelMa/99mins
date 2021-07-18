@@ -1,5 +1,7 @@
 # App Capture
+![alt text](https://github.com/MisaelMa/99mins/blob/main/public/capture/1.png?raw=true)
 
+![alt text](https://github.com/MisaelMa/99mins/blob/main/public/capture/2.png?raw=true)
 
 ## Project setup
 ```
@@ -15,3 +17,6 @@ npm run dev
 ```
 npm run build
 ```
+
+
+Qu
